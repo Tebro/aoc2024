@@ -1,7 +1,4 @@
 {
-  "tasks": {
-    "dev": "deno run --watch main.ts"
-  },
   "imports": {
     "@types/node": "npm:@types/node@^22.10.1"
   }
