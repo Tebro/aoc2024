@@ -1,6 +1,3 @@
-/// <reference types="npm:@types/node" />
-import * as fs from "node:fs/promises";
-
 export type DayArgs<I> = {
   day: number;
   // If not provided, the input will be split by newlines
@@ -10,8 +7,10 @@ export type DayArgs<I> = {
   step2?: (input: I) => number;
 };
 
-const getInput = (day: number) => {
-  return fs.readFile(`./day${day}/input`, { encoding: "utf8" });
+const getInput = async (day: number) => {
+  const decoder = new TextDecoder("utf-8");
+  const data = await Deno.readFile(`./day${day}/input`);
+  return decoder.decode(data);
 };
 
 const defaultParser = (input: string): string[] => {
