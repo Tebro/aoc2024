@@ -22,10 +22,10 @@ const defaultParser = (input: string): string[] => {
 };
 
 const runStep = <I>(input: I, f: (input: I) => number) => {
-  const start = new Date();
+  const start = performance.now();
   const res = f(input);
-  const end = new Date();
-  console.log(`Execution took: ${end.getTime() - start.getTime()}ms`);
+  const end = performance.now();
+  console.log(`Execution took: ${end - start}ms`);
   console.log("Result:", res);
 };
 
