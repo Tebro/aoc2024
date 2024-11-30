@@ -5,4 +5,4 @@ if [ -z $1 ]; then
     exit 1
 fi
 
-deno run --watch --allow-read ./day$1/day$1.ts
+deno run --allow-read ./day$1/day$1.ts
