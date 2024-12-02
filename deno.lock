@@ -3,7 +3,8 @@
   "specifiers": {
     "npm:@types/node@*": "22.5.4",
     "npm:@types/node@^22.10.1": "22.10.1",
-    "npm:remeda@*": "2.17.4"
+    "npm:remeda@*": "2.17.4",
+    "npm:remeda@^2.17.4": "2.17.4"
   },
   "npm": {
     "@types/node@22.10.1": {
@@ -36,7 +37,8 @@
   },
   "workspace": {
     "dependencies": [
-      "npm:@types/node@^22.10.1"
+      "npm:@types/node@^22.10.1",
+      "npm:remeda@^2.17.4"
     ]
   }
 }
